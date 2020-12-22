@@ -1,13 +1,9 @@
-/* --- Variables --- */
-
-/* --- Main styles --- */
-
 h1, h2, h3{
     font-weight: normal;
 }
 
 body{
-    margin: 0;
+    margin: 15;
     font-family: Verdana;
 }
 
@@ -22,7 +18,7 @@ nav.main-nav ul{
 }
 
 nav a{
-    color: #daa33e;
+    color: #753eda;
 }
 
 .banner{
