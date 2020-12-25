@@ -1,0 +1,30 @@
+body{
+    color: yellowgreen;
+}
+
+div {
+    color:blue;
+}
+p {
+    color: red;
+}
+
+a {
+    color: black;
+    text-decoraton : underline;
+}
+
+#header {
+    color : rgb(80, 16, 35);
+}
+#header h1{
+    color : yellowgreen;
+}
+
+.test {
+    background-color: blue;
+}
+
+.test h1{
+    color : white;
+}
