@@ -1,0 +1,22 @@
+h1 {
+    color: orange;
+    background-color: slategray;
+    font-size: 20px;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+p {
+    color: slategray;
+    text-align: justify;
+    line-height: 30px;
+    letter-spacing: 1px;
+    column-count: 3;
+    column-gap: 40px;
+}
+
+ul {
+    border-width: 4px;
+    border-style: solid;
+    border-color: crimson;
+}

@@ -11,5 +11,8 @@ nav.main-nav ul li{
     list-style-type:none ;
     padding: 0 30px 0 0px;
     text-align: center;
-    
+}
+
+nav.main-nav {
+    color: blue;
 }
