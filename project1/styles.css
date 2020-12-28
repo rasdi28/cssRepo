@@ -1,7 +1,7 @@
 /* variables */
 :root {
     --primary : #ffc636;
-    --secondary : #090a44; 
+    --secondary : #0a0b5b; 
 
 }
 
@@ -73,8 +73,80 @@ h1,h3 {
     font-size: 1.2em;
 
 }
-/* mobile styles */
+h2 {
+    font-size: 1.6em;
+}
 
+h4{
+    font-size: :1.1em;
+}
+
+.leading {
+    font-size: 1.1em;
+
+}
+/* mobile styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+.site-nav{
+    margin: 0 20px;
+
+}
+.site-nav ul {
+    display: none;
+}
+.site-nav h1 {
+    grid-column: 1/4;
+    grid-row: 1;
+    padding-bottom:10px ;
+    border-bottom: 3px solid var(--primary);
+}
+
+#welcome {
+    padding: 0 20px 20px 20px;
+
+}
+
+.welcome-text {
+    grid-column: 1/6;
+}
+.welcome-img {
+    grid-column: 6/9;
+
+}
+.welcome-img img {
+    width: 200%;
+}
+
+.welcome-text a {
+    margin: 20px 0;
+}
+
+#portfolio {
+    background: url(./assets/square_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 30px 20px;
+}
+
+#portfolio h3 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.projects a{
+    grid-column: 1/9;
+    margin : 20px 0;
+}
+.projects a {
+    margin: 0 20px;
+    max-width: 40px;
+    align-self: center;
+
+}
 /* small tablet styles */
 @media screen and (min-width: 620px){
   
@@ -91,8 +163,7 @@ h1,h3 {
 /* desktop styles */
 @media screen and (min-width: 1200px){
     body{
-        font-size: 18px;
+        font-size: 20px;
     }
 
 }
-
