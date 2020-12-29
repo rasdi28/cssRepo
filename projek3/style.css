@@ -1,0 +1,22 @@
+/* variables */
+
+/* reset */
+
+/* base stylex */
+
+
+/* font  */
+
+
+/* mobile style  */
+
+/* small tablet style  */
+
+@media screen and (min-width : 620px) {}
+
+/* large tables & laptops style */
+
+@media screen and (min-width : 960px) {}
+
+/* desktop styles */
+@media screen and (min-width : 1200px) {}
