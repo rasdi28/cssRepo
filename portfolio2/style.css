@@ -1,0 +1,109 @@
+body {
+  background-color: rgb(110, 134, 185);
+}
+
+.navigation {
+  background-color: rgb(54, 145, 114);
+}
+
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 300px;
+  margin-left: 200px;
+  margin-top: 100px;
+
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  transition: .5s;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+}
+
+.main .navigation {
+  width: 25%;
+  height: calc (100% - 100px);
+  margin-top: 50px;
+  background-color: #51d7af;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.navigation .name {
+  margin: 30px 0;
+  padding: 15px;
+  padding-left: 30px;
+}
+
+.name h1 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.name span {
+  font-weight: bold;
+
+}
+
+.navigation nav ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+}
+
+
+.navigation nav ul li span {
+  width: 25px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.navigation nav ul li a {
+  padding: 15px;
+  padding-left: 30px;
+  width: 100%;
+}
+
+.navigation nav ul li a:hover {
+  background-color: #fff;
+  color: #51d7af;
+}
+
+.social-media {
+  padding: 15px;
+  padding-left: 30px;
+  background-color: #51d7af;
+}
+
+.social-media ul {
+  margin-top: 30px;
+  display: flex;
+}
+
+.social-media ul li {
+  margin-right: 30px;
+}
+
+.social-media ul li a {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding-top: 8px;
+}
