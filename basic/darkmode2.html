@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100vh;
+            background: hsl(200,75%,65%);
+            transition: background 1.2s;
+        }
+        .container.dark {
+            background : hsl(200, 65%, 8%);
+
+        }
+        .container-icons-outer {
+            height: 120px;
+        }
+        .icon-container {
+            position: relative;
+        }
+        .icons{
+            --rotation : 0;
+            position: absolute;
+            left: calc(50% -20px);
+            top: -117px;
+            margin: auto;
+            transition: 1.2s;
+            width: 40px;
+            text-align: center;
+            transform: rotate(calc(var(--rotation*1deg)));
+        }
+        .icon {
+            font-size: 2em;
+            padding: 40px 0;
+            color: hsl(50, 85%,55%);
+            transition: color 1.2s;
+        }
+        .dark .icon {
+            color: #ccc;
+        }
+        .icon1 {
+            transform: rotate(180deg);
+
+        }
+        .btn-container {
+            text-align: center;
+        }
+        .swap-btn {
+            width: 120px;
+            margin: auto;
+            padding: 10px 20px;
+            background: #848484;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            color: #eee;
+            outline: none;
+            cursor: pointer;
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="container">
+        <div class="container-icons-outer">
+            <div class="icon-container">
+                <div id="icons" class="icons">
+                    <div id="icon1" class="icon icon1">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div id="icon2" class="icon icon2">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button id="swap-btn" class="swap-btn">Switch to Dark Mode</button>
+        </div>
+    </div>
+
+    <script>
+        // DOM elements
+const swapBtn = document.querySelector('#swap-btn')
+const container = document.querySelector('#container')
+const icons = document.querySelector('#icons')
+
+// get data stored in localStorage and set up app
+let dark = JSON.parse(localStorage.getItem('animated-icons-darkmode')) || false
+if (dark) {
+	container.classList.add('dark')
+	swapBtn.textContent = 'Switch to Light Mode'
+	icons.style.setProperty('--rotation', 180)
+}
+
+// Event listener on button
+swapBtn.addEventListener('click', () => {
+	container.classList.toggle('dark')
+	const rotation = parseInt(getComputedStyle(icons).getPropertyValue('--rotation'))
+	icons.style.setProperty('--rotation', rotation - 180)
+	dark = !dark
+	if (dark) {
+		swapBtn.textContent = 'Switch to Light Mode'
+	} else {
+		swapBtn.textContent = 'Switch to Dark Mode'
+	}
+	localStorage.setItem('animated-icons-darkmode', JSON.stringify(dark))
+})
+    </script>
+</body>
+</html>

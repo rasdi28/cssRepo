@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://css.gg/dark-mode.css' rel='stylesheet'>
+    <title>Document</title>
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color:black;
+            font-size: 25px;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Hello Ngoding Bareng</h2>
+    <p>Membuat Dark Mode pada sebuah tampilan</p>
+    <button onclick="myFunction()"><i class="gg-dark-mode"></i></button>
+
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
